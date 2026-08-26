@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { profile } from "../../content/profile";
-import { siteUrl } from "@/lib/site";
+export const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.NEXT_PUBLIC_VERCEL_URL
+    ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+    : "http://localhost:3000");
 import "./globals.css";
 
 const siteTitle = `${profile.name} — Cloud & Backend Engineering`;
