@@ -82,8 +82,8 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-16">
-      <h2 className="font-mono text-sm uppercase tracking-wide text-accent">Contact</h2>
+    <section id="contact" className="section-rule py-20 sm:py-24">
+      <h2 className="font-mono text-xs uppercase tracking-[0.18em] text-accent">Contact</h2>
 
       <div className="mt-10 grid gap-8 md:grid-cols-[1fr_260px]">
         <div className="fade-in-up">

@@ -44,8 +44,8 @@ function LeadershipPeriod({ period }: { period: string }) {
 
 export function Leadership() {
   return (
-    <section id="leadership" className="py-16">
-      <h2 className="font-mono text-sm uppercase tracking-wide text-accent">Leadership</h2>
+    <section id="leadership" className="section-rule py-20 sm:py-24">
+      <h2 className="font-mono text-xs uppercase tracking-[0.18em] text-accent">Leadership</h2>
       <p className="mt-4 max-w-2xl text-base text-text-secondary">{leadership.intro}</p>
 
       <div className="mt-10 flex flex-col gap-8">
@@ -58,7 +58,7 @@ export function Leadership() {
           return (
             <article
               key={entry.role + entry.org}
-              className="fade-in-up rounded-lg border border-border bg-surface p-6"
+              className="card-lift fade-in-up rounded-2xl border border-border bg-surface p-6 sm:p-8"
             >
               <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                 <h3 className="text-xl font-semibold text-text-primary">

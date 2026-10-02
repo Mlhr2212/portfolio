@@ -14,8 +14,8 @@ const periodDatetime: Record<string, string> = {
 
 export function Journey() {
   return (
-    <section id="journey" className="py-16">
-      <h2 className="font-mono text-sm uppercase tracking-wide text-accent">
+    <section id="journey" className="section-rule py-20 sm:py-24">
+      <h2 className="font-mono text-xs uppercase tracking-[0.18em] text-accent">
         {journey.heading}
       </h2>
       <p className="mt-4 max-w-2xl text-base text-text-secondary">

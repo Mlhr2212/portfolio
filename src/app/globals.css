@@ -52,6 +52,43 @@ body {
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
+main {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+main::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 auto;
+  height: 42rem;
+  background-image: linear-gradient(to right, color-mix(in srgb, var(--color-border) 42%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-border) 42%, transparent) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+  mask-image: linear-gradient(to bottom, black, transparent 78%);
+  content: "";
+  pointer-events: none;
+}
+
+.section-rule {
+  border-top: 1px solid var(--color-border);
+}
+
+.card-lift {
+  transition: border-color var(--duration-motion) var(--ease-motion),
+    box-shadow var(--duration-motion) var(--ease-motion),
+    transform var(--duration-motion) var(--ease-motion);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card-lift:hover {
+    border-color: color-mix(in srgb, var(--color-accent) 55%, var(--color-border));
+    box-shadow: 0 14px 30px color-mix(in srgb, var(--color-text-primary) 8%, transparent);
+    transform: translateY(-2px);
+  }
+}
+
 /* ---------------------------------------------------------------------
    Motion — fade + 8px translate, 200ms max, reduced-motion respected.
    Elements start in their final state; the animation is only added when

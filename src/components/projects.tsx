@@ -5,19 +5,25 @@ import { HighlightTarget } from "@/components/highlight-target";
 
 export function Projects() {
   return (
-    <section id="projects" className="py-16">
-      <h2 className="font-mono text-sm uppercase tracking-wide text-accent">
+    <section id="projects" className="section-rule py-20 sm:py-24">
+      <h2 className="font-mono text-xs uppercase tracking-[0.18em] text-accent">
         {projects.heading}
       </h2>
 
       <div className="mt-10 flex flex-col gap-8">
-        {projects.items.map((project) => {
+        {projects.items.map((project, index) => {
           const limitation = project.limitation ? stripFill(project.limitation) : "";
 
           return (
             <HighlightTarget key={project.name} tags={project.tags}>
-              <article className="fade-in-up rounded-lg border border-border bg-surface p-6">
-                <h3 className="text-xl font-semibold text-text-primary">{project.name}</h3>
+              <article className="card-lift fade-in-up rounded-2xl border border-border bg-surface p-6 sm:p-8">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.18em] text-text-secondary">Case study 0{index + 1}</p>
+                    <h3 className="text-2xl font-semibold tracking-tight text-text-primary">{project.name}</h3>
+                  </div>
+                  <span className="font-mono text-xs text-accent" aria-hidden="true">↗</span>
+                </div>
                 <p className="mt-1 text-sm text-text-secondary">{project.tagline}</p>
 
                 <div className="mt-4 flex flex-col gap-3 text-base text-text-secondary">

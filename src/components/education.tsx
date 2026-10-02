@@ -15,8 +15,8 @@ function EducationPeriod({ period }: { period: string }) {
 
 export function Education() {
   return (
-    <section id="education" className="py-16">
-      <h2 className="font-mono text-sm uppercase tracking-wide text-accent">Education</h2>
+    <section id="education" className="section-rule py-20 sm:py-24">
+      <h2 className="font-mono text-xs uppercase tracking-[0.18em] text-accent">Education</h2>
 
       <div className="mt-10 flex flex-col gap-8">
         {education.map((entry) => {
@@ -27,7 +27,7 @@ export function Education() {
           return (
             <article
               key={entry.school + entry.degree}
-              className="fade-in-up rounded-lg border border-border bg-surface p-6"
+              className="card-lift fade-in-up rounded-2xl border border-border bg-surface p-6 sm:p-8"
             >
               <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                 <h3 className="text-xl font-semibold text-text-primary">{entry.school}</h3>

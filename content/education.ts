@@ -15,7 +15,14 @@ export const education: EducationEntry[] = [
     degree: "B.S. Computer Science",
     period: "Aug 2023 – May 2027 (expected)",
     gpa: "3.9",
-    deansList: ["Fall 2023", "Spring 2024", "Spring 2026"],
+    deansList: [
+      "Fall 2023",
+      "Spring 2024",
+      "Fall 2024",
+      "Spring 2025",
+      "Fall 2025",
+      "Spring 2026",
+    ],
     coursework: [
       "Data Structures & Algorithms",
       "Software Engineering",

@@ -25,14 +25,18 @@ const focusRing =
 
 export function Hero() {
   return (
-    <section className="py-16 sm:py-24">
-      <h1 className="fade-in-up max-w-2xl text-4xl font-semibold tracking-tight text-text-primary sm:text-5xl">
-        {profile.heroHeadline}
-      </h1>
-      <p className="fade-in-up mt-6 max-w-xl text-lg text-text-secondary">
-        {profile.heroSubline}
-      </p>
-      <div className="mt-8 flex flex-wrap items-center gap-4">
+    <section className="grid gap-12 border-b border-border py-20 sm:py-28 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-end lg:gap-20">
+      <div>
+        <p className="fade-in-up mb-6 font-mono text-xs uppercase tracking-[0.22em] text-accent">
+          Cloud infrastructure · reliability · automation
+        </p>
+        <h1 className="fade-in-up max-w-3xl text-5xl font-semibold leading-[1.04] tracking-[-0.04em] text-text-primary sm:text-7xl">
+          {profile.heroHeadline}
+        </h1>
+        <p className="fade-in-up mt-7 max-w-2xl text-lg leading-8 text-text-secondary sm:text-xl">
+          {profile.heroSubline}
+        </p>
+        <div className="mt-9 flex flex-wrap items-center gap-4">
         <Link
           href="/resume"
           className={`rounded-md bg-accent px-5 py-2.5 text-sm font-medium text-bg transition-motion hover:opacity-90 ${focusRing}`}
@@ -45,8 +49,8 @@ export function Hero() {
         >
           Get in touch
         </a>
-      </div>
-      <ul className="mt-8 flex items-center gap-4">
+        </div>
+        <ul className="mt-8 flex items-center gap-4">
         {profile.socials.map((social) => (
           <li key={social.href}>
             <a
@@ -60,7 +64,36 @@ export function Hero() {
             </a>
           </li>
         ))}
-      </ul>
+        </ul>
+      </div>
+
+      <aside className="fade-in-up relative overflow-hidden rounded-2xl border border-border bg-surface/80 p-5 shadow-sm">
+        <div className="absolute right-0 top-0 h-24 w-24 rounded-full bg-accent/10 blur-2xl" aria-hidden="true" />
+        <div className="relative">
+          <div className="flex items-center justify-between border-b border-border pb-4 font-mono text-[11px] uppercase tracking-[0.18em] text-text-secondary">
+            <span>System profile</span>
+            <span className="text-accent">v2026</span>
+          </div>
+          <dl className="mt-5 space-y-5 text-sm">
+            <div>
+              <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-text-secondary">Focus</dt>
+              <dd className="mt-1 font-medium text-text-primary">Backend & cloud engineering</dd>
+            </div>
+            <div>
+              <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-text-secondary">Location</dt>
+              <dd className="mt-1 font-medium text-text-primary">{profile.location}</dd>
+            </div>
+            <div>
+              <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-text-secondary">Current role</dt>
+              <dd className="mt-1 font-medium text-text-primary">DevOps Intern · Aavgo</dd>
+            </div>
+          </dl>
+          <div className="mt-6 flex items-center gap-2 border-t border-border pt-4 font-mono text-[11px] text-accent">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
+            Building systems that recover
+          </div>
+        </div>
+      </aside>
     </section>
   );
 }

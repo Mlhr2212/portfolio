@@ -11,6 +11,7 @@ import { Nav } from "@/components/nav";
 import { Projects } from "@/components/projects";
 import { SkillFilterProvider } from "@/components/skill-filter-context";
 import { Skills } from "@/components/skills";
+import { SystemsFlow } from "@/components/systems-flow";
 import { profile } from "../../content/profile";
 import { siteUrl } from "@/lib/site";
 
@@ -40,6 +41,7 @@ export default function Home() {
       <main className="flex-1">
         <Container className="flex flex-col">
           <Hero />
+          <SystemsFlow />
           <About />
           <Journey />
           <SkillFilterProvider>

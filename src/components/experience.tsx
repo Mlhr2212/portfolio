@@ -26,8 +26,8 @@ function ExperiencePeriod({ period }: { period: string }) {
 
 export function Experience() {
   return (
-    <section id="experience" className="py-16">
-      <h2 className="font-mono text-sm uppercase tracking-wide text-accent">
+    <section id="experience" className="section-rule py-20 sm:py-24">
+      <h2 className="font-mono text-xs uppercase tracking-[0.18em] text-accent">
         Experience
       </h2>
 
@@ -38,7 +38,7 @@ export function Experience() {
 
           return (
             <HighlightTarget key={entry.company + entry.role} tags={entry.tags}>
-              <article className="fade-in-up rounded-lg border border-border bg-surface p-6">
+              <article className="card-lift fade-in-up rounded-2xl border border-border bg-surface p-6 sm:p-8">
                 <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                   <h3 className="text-xl font-semibold text-text-primary">
                     {entry.role} · {entry.company}

@@ -18,8 +18,8 @@ export function Skills() {
   const { activeSkill, toggleSkill } = useSkillFilter();
 
   return (
-    <section id="skills" className="py-16">
-      <h2 className="font-mono text-sm uppercase tracking-wide text-accent">Skills</h2>
+    <section id="skills" className="section-rule py-20 sm:py-24">
+      <h2 className="font-mono text-xs uppercase tracking-[0.18em] text-accent">Skills</h2>
 
       <div className="mt-10 flex flex-col gap-6">
         {skills.map((group) => (
